@@ -1,0 +1,16 @@
+@mixin up($size) {
+    @media (min-width: $size * 1px) {
+      @content;
+    }
+  }
+  @mixin down($size) {
+    @media (max-width: $size * 1px) {
+      @content;
+    }
+  }
+  
+  @function space($value) {
+    $result: $value * 8;
+    @return $result + px
+  }
+  
